@@ -1,19 +1,15 @@
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
+import Navigation from "./components/Navigation";
 
 export default function App() {
   return (
-    <div>
-      {/* Navigation */}
-      <nav style={{ marginBottom: "20px" }}>
-        <Link to="/" style={{ marginRight: "10px" }}>Home</Link>
-        {/* <Link to="/about">About</Link> */}
-      </nav>
+    <>
+      <Navigation />
 
-      {/* Routing */}
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </div>
+    </>
   );
 }
