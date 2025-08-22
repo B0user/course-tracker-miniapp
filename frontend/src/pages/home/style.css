@@ -1,0 +1,152 @@
+.home-search {
+    height: 200px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    font-size: 30px;
+
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #7FD6AB;
+    box-sizing: border-box;
+
+
+}
+
+.home-page {
+    width: 100%;
+    max-height: 100vh;
+
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    overflow-x: scroll;
+}
+
+.search-bar {
+    height: 30px;
+    width: 200px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    color: #7FD6AB;
+}
+
+.home-cats {
+    color: black;
+    box-sizing: border-box;
+    font-size: 24px;
+    line-height: 0.5;
+    font-weight: 700;
+}
+
+.home-cats-slider{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    box-sizing: border-box;
+    padding-left: 10px;
+    gap: 10px;
+    max-width: 100vw;
+    overflow-y: scroll;
+}
+
+.home-cats-slider-item {
+    text-wrap: nowrap;
+    background-color: white;
+    border-radius: 100px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.home-header {
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 30px;
+}
+
+.home-profile {
+    display: flex;
+    align-items: center;
+}
+
+.home-course-list {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    overflow-y: scroll;
+    max-width: 100vw;
+    gap: 20px;
+    
+    box-sizing: border-box;
+}
+
+.home-course-list-item {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    flex-direction: column;
+
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    
+    box-sizing: border-box;
+}
+
+.home-course-list-item img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.home-course-list-item-text {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home-course-list-item-text-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 0.9;
+}
+
+.home-course-list-item-text-desc {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    color: gray;
+}
+
+.home-courses-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+}

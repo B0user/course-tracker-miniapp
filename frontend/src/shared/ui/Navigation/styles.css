@@ -4,21 +4,23 @@
     display: flex;
     align-content: center;
     justify-content: center;
+    background-color: white;
 
     position: fixed;
-    bottom: 30px;
+    bottom: 0px;
+
+    z-index: 9999px;
 }
 
 .navigation-frame {
     width: 250px;
-    height: 20px;
+    height: 60px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    background-color: white;
     border-radius: 5px;
     padding: 20px;
 }
@@ -44,13 +46,13 @@
 
 .navigation-active-indicator {
     position: absolute;
-    top: 9px;
+    top: 30px;
     left: 1px;
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 70, 255, 0.4);
+    background-color: rgba(239, 139, 111, 0.4);
     box-shadow: #1a1a1a 1px 1px 1px;
-    border: 1px solid rgba(0, 70, 255, 0.4);
+    border: 1px solid rgba(239, 139, 111, 0.4);
     border-radius: 5px;
     transition: transform 0.3s ease;
     pointer-events: none;

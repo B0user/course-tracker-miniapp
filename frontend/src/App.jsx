@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Navigation from "./components/Navigation";
+import Home from "./pages/home/HomePage.jsx";
+import MyCourses from "./pages/mycourses/MyCoursesPage.jsx"
+import Navigation from "./shared/ui/Navigation/Navigation.jsx";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/mycourses" element={<MyCourses />} />
       </Routes>
     </>
   );

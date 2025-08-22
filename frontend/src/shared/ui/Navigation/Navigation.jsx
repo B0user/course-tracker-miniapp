@@ -2,10 +2,10 @@ import { NavLink } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import './styles.css'
 
-import homeIcon from '../assets/icons/nav-home.svg'
-import aboutIcon from '../assets/icons/nav-about.svg'
-import homeworkIcon from '../assets/icons/nav-homework.svg'
-import scheduleIcon from '../assets/icons/nav-schedule.svg'
+import homeIcon from '../../../assets/icons/nav-home.svg'
+import aboutIcon from '../../../assets/icons/nav-about.svg'
+import homeworkIcon from '../../../assets/icons/nav-homework.svg'
+import scheduleIcon from '../../../assets/icons/nav-schedule.svg'
 
 export default function Navigation() {
     const [activePos, setActivePos] = useState(0);
@@ -13,9 +13,9 @@ export default function Navigation() {
 
     const items = [
         { to: '/', icon: homeIcon, alt: 'home' },
+        { to: '/mycourses', icon: homeworkIcon, alt: 'homework' },
+        { to: '/schedule', icon: scheduleIcon, alt: 'schedule' },
         { to: '/about', icon: aboutIcon, alt: 'about' },
-        { to: '/hw', icon: homeworkIcon, alt: 'homework' },
-        { to: '/schedule', icon: scheduleIcon, alt: 'schedule' }
     ];
 
     useEffect(() => {
