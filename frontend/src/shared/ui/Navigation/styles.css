@@ -9,7 +9,7 @@
     position: fixed;
     bottom: 0px;
 
-    z-index: 9999px;
+    z-index: 9999;
 }
 
 .navigation-frame {
@@ -51,7 +51,7 @@
     width: 40px;
     height: 40px;
     background-color: rgba(239, 139, 111, 0.4);
-    box-shadow: #1a1a1a 1px 1px 1px;
+    box-shadow: var(--color-primary) 1px 1px 1px;
     border: 1px solid rgba(239, 139, 111, 0.4);
     border-radius: 5px;
     transition: transform 0.3s ease;

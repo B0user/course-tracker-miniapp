@@ -1,11 +1,17 @@
 :root {
+  --color-primary: #386641;
+  --color-secondary: #6a994e;
+  --color-accent: #a7c957;
+  --color-light: #f2e8cf;
+  --color-error: #bc4749;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #FFF5E1;
+  background-color: var(--color-secondary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
