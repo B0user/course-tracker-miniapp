@@ -1,0 +1,128 @@
+.info-page {
+    width: 100%;
+    max-height: max-content;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: scroll;
+    background-color: var(--color-light);
+}
+
+.info-header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.info-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.info-header p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--color-secondary);
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-section {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-light);
+    padding-bottom: 8px;
+}
+
+.info-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--color-light);
+}
+
+.feature-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    border-radius: 10px;
+}
+
+.feature-text h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.feature-text p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-secondary);
+    line-height: 1.4;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.contact-value {
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+.version-info {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin: 0;
+    padding: 16px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+}

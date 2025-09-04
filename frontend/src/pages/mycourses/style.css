@@ -1,65 +1,91 @@
 .mycourses-page {
     width: 100%;
     max-height: 100vh;
-
-    display: flex;
-    align-items: start;
-    justify-content: flex-start;
-    flex-direction: column;
-
     box-sizing: border-box;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: auto;
+    background-color: var(--color-light);
+}
 
-    overflow-x: scroll;
+.mycourses-header {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mycourses-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.mycourses-header p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-secondary);
 }
 
 .mycourses-cats {
-    color: black;
-    box-sizing: border-box;
-    font-size: 24px;
-    line-height: 0.5;
-    font-weight: 700;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mycourses-cats-slider {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    box-sizing: border-box;
-    padding-left: 10px;
-    gap: 10px;
-    max-width: 100vw;
-    flex-direction: row;
+.mycourses-cats h2 {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
 }
 
-.mycourses-slider-item {
-    text-wrap: nowrap;
-    background-color: white;
-    border-radius: 100px;
-    height: 30px;
-    padding: 10px;
+.mycourses-cats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.mycourses-cats-item {
+    background-color: var(--color-light);
+    border-radius: 12px;
+    padding: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-primary);
+    text-align: center;
+    min-height: 60px;
+    transition: background-color 0.2s ease;
+}
+
+.mycourses-cats-item:hover {
+    background-color: var(--color-accent);
+    color: white;
 }
 
 .mycourses-hero-block {
     width: 100%;
-    height: 140px;
-    border-radius: 15px;
-    background-color: #EF8B6F;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--color-error), var(--color-secondary));
     box-sizing: border-box;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 24px;
+    text-align: center;
+    color: white;
 }
 
 .progress-container {
     position: relative;
     width: 100%;
     height: 20px;
-    background-color: #f0f0f0;
+    background-color: var(--color-light);
     border-radius: 10px;
     overflow: hidden;
     margin-top: 10px;
@@ -67,7 +93,7 @@
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, #EF8B6F, #FF6B6B);
+    background: linear-gradient(90deg, var(--color-error), var(--color-error));
     border-radius: 10px;
     transition: width 0.3s ease;
 }
@@ -79,36 +105,72 @@
     transform: translate(-50%, -50%);
     font-size: 12px;
     font-weight: 600;
-    color: #333;
+    color: var(--color-primary);
     z-index: 0;
+}
+
+.mycourses-hero-block h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.mycourses-hero-block p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.9;
 }
 
 .mycourses-course-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 16px;
     width: 100%;
 }
 
 .mycourses-course-list-item {
     background-color: white;
-    color: black;
-    border-radius: 15px;
-    width: 100%;
+    border-radius: 16px;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
+    gap: 16px;
     align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-.mycourses-course-list-item img {
-    border-radius: 15px;
-    margin-left: 5px;
+.mycourses-course-list-item:hover {
+    transform: translateY(-2px);
+}
+
+.course-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mycourses-course-list-item-text {
+    flex: 1;
+}
+
+.mycourses-course-list-item-text h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
 }
 
 .mycourses-course-list-item-text p {
-    line-height: 0.8;
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: var(--color-secondary);
+    line-height: 1.4;
 }

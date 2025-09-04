@@ -32,26 +32,30 @@ export default function Home() {
 
   return (
       <div className="home-page">
-
         <div className='home-header'>
-          <p>Привет, Адиль!</p>
+          <div className='home-greeting'>
+            <h1>Привет, Адиль!</h1>
+            <p>Добро пожаловать в мир изучения языков</p>
+          </div>
           <div className='home-profile'>
-            <img className='home-profile-pic' width={35} height={35} src={DefaultProfilePic} />
+            <img className='home-profile-pic' width={40} height={40} src={DefaultProfilePic} />
           </div>
         </div>
 
         <div className="home-search">
-          <p>Подбери себе курс</p>
-          <input className="search-bar" placeholder='Название курса'/>
+          <h2>Подбери себе курс</h2>
+          <div className="search-container">
+            <input className="search-bar" placeholder='Название курса'/>
+          </div>
         </div>
         
         <div className='home-cats'>
-          <p>Категории</p>
-          <div className='home-cats-slider'>
+          <h2>Категории</h2>
+          <div className='home-cats-grid'>
             {
               CATEGORIES.map(
-                (item) => 
-                  <div className='home-cats-slider-item'>
+                (item, index) => 
+                  <div className='home-cats-item' key={index}>
                       {item}
                   </div>
               )
@@ -60,16 +64,18 @@ export default function Home() {
         </div>
 
         <div className='home-courses'>
-          <p className='home-courses-title'>Курсы</p>
+          <h2>Популярные курсы</h2>
           <div className='home-course-list'>
             {
               courses?.map(
-                (item) => 
-                  <div className='home-course-list-item'>
-                    <img src={item.img} height={120}/>
+                (item, index) => 
+                  <div className='home-course-list-item' key={index}>
+                    <div className='course-image'>
+                      <img src={item.img} alt={item.name}/>
+                    </div>
                     <div className='home-course-list-item-text'>
-                      <p className='home-course-list-item-text-name'>{item.name}</p>
-                      <p className='home-course-list-item-text-desc'>{item.desc}</p>
+                      <h3>{item.name}</h3>
+                      <p>{item.desc}</p>
                     </div>
                   </div>
               )              

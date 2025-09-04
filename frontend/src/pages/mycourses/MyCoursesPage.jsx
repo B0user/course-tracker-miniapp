@@ -64,12 +64,18 @@ export default function MyCourses() {
 
   return (
       <div className='mycourses-page'>
-         <div className='mycourses-cats'>
-          <div className='mycourses-cats-slider'>
+        <div className='mycourses-header'>
+          <h1>Мои курсы</h1>
+          <p>Отслеживайте свой прогресс в обучении</p>
+        </div>
+
+        <div className='mycourses-cats'>
+          <h2>Фильтр по категориям</h2>
+          <div className='mycourses-cats-grid'>
             {
               CATEGORIES.map(
-                (item) => 
-                  <div className='mycourses-slider-item'>
+                (item, index) => 
+                  <div className='mycourses-cats-item' key={index}>
                       {item}
                   </div>
               )
@@ -78,17 +84,20 @@ export default function MyCourses() {
         </div>
         
         <div className='mycourses-hero-block'>
-            <p>Английский язык</p>
+            <h2>Английский язык</h2>
+            <p>Продолжайте обучение</p>
         </div>
 
         <div className='mycourses-course-list'>
             {
                 mycourses.map(
-                    (item) => 
-                        <div className='mycourses-course-list-item'>
-                            <img src={item.img} width={110} height={110}/>
+                    (item, index) => 
+                        <div className='mycourses-course-list-item' key={index}>
+                            <div className='course-image'>
+                                <img src={item.img} alt={item.name}/>
+                            </div>
                             <div className='mycourses-course-list-item-text'>
-                                <p>{item.name}</p>
+                                <h3>{item.name}</h3>
                                 <p>{item.desc}</p>
                                 <div className='progress-container'>
                                     <div className='progress-bar' style={{width: `${item.progress}%`}}></div>
